@@ -1,0 +1,404 @@
+:root {
+  --marine-blue: hsl(213, 96%, 18%);
+ --purplish-blue: hsl(243, 100%, 62%);
+ --pastel-blue: hsl(228, 100%, 84%);
+ --light-blue: hsl(206, 94%, 87%);
+ --strawberry-red: hsl(354, 84%, 57%);
+ --cool-gray: hsl(231, 11%, 63%);
+--light-gray: hsl(229, 24%, 87%);
+--magnolia: hsl(217, 100%, 97%);
+--alabaster: hsl(231, 100%, 99%);
+--white: hsl(0, 0%, 100%);
+}
+body {
+  margin: 0;
+  padding: 10% 0;
+  font-family: 'Ubuntu', sans-serif;
+  background-color: var(--magnolia);
+  font-size: 1rem;
+  
+}
+
+.container {
+  box-sizing: border-box;
+  width: 70%;
+  background-color: var(--white);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin: 0 auto;
+  border-radius: 12px;
+  min-height: 100vh;
+  padding: 20px;
+}
+.step-container {
+  box-sizing: border-box;
+  grid-area: 1/1/3/2;
+  padding: 15% 10%;
+  background-image: url("./assets/images/bg-sidebar-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 6px;
+}
+.step {
+  display: flex;
+  margin-bottom: 2.5rem;
+  
+}
+.info {
+  box-sizing: border-box;
+}
+h1 {
+  color: var(--marine-blue);
+}
+.number {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--white);
+  border-radius: 50%;
+  font-size: 0.8rem;
+  color: var(--white);
+}
+.active {
+  background-color: var(--light-blue);
+}
+.number-text {
+  font-size: 0.8rem;
+  margin-left: 0.7rem;
+  color: var(--cool-gray);
+  letter-spacing: 1px;
+}
+.number-text strong {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--white);
+}
+.step1, .step2, .step3, .step4, .controller {
+  padding: 0 15%;
+}
+.step1 > div, .plans {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+p {
+  color: var(--cool-gray);
+  margin-bottom: 3rem;
+}
+.input-name {
+  font-size: 0.9rem;
+  color: var(--marine-blue);
+}
+.input-text {
+  flex-basis: 100%;
+  margin: 0.5rem 0 1.5rem 0;
+  padding: 1rem;
+  border: 1px solid var(--light-gray);
+  border-radius: 8px;
+  color: var(--marine-blue);
+  font-weight: 500;
+}
+.input-text:hover {
+border: 1px solid var(--purplish-blue);
+cursor: pointer;
+}
+.input-text:focus {
+  outline: none;
+}
+.warn-focus, .warn-focus:focus, .warn-focus:hover {
+  border: 1px solid red;
+} 
+.input-text::placeholder {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  color: var(--cool-gray);
+}
+.warning {
+  font-size: 0.9rem;
+  color: red;
+  
+}
+
+.controller {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+  padding-top: 15%;
+}
+
+.next-button {
+  padding: 1rem 1.5rem;
+  background-color: var(--marine-blue);
+  color: white;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+.confirm {
+  background-color: var(--purplish-blue);
+}
+.confirm:hover {
+  background-color: var(--pastel-blue);
+}
+
+.pre-button {
+  color: var(--cool-gray);
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+
+input[type="radio"] {
+  display: none;
+}
+input[type="radio"]:checked + label {
+  background-color: var(--alabaster);
+  border: 1px solid var(--purplish-blue);
+  }
+.radio-label {
+  box-sizing: border-box;
+  flex-basis: 30%;
+  padding: 5% 2.5%;
+  border: 1px solid var(--light-gray);
+  border-radius: 9px;
+  cursor: pointer;
+}
+.radio-label:hover {
+  border: 1px solid var(--purplish-blue);
+}
+.radio-label img {
+  margin-bottom: 2rem;
+}
+.heading {
+  color: var(--marine-blue);
+  margin: 0 0 0.3rem 0;
+}
+.price {
+  color: var(--cool-gray);
+  font-size: 0.8rem;
+  margin: 0 0 0.3rem 0;
+}
+.free-text {
+  font-size: 0.8rem;
+  color: var(--marine-blue);
+}
+.option-container {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+  padding: 0.5rem 0;
+  background-color: var(--alabaster);
+}
+.input-range {
+appearance: none;
+width: 1.8rem;
+background-color: var(--marine-blue);
+padding: 3px 4px;
+border-radius: 10px;
+margin: 0 1.2rem;
+cursor: pointer;
+}
+.input-range::-webkit-slider-thumb{
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  appearance: none;
+  background-color: white;
+  }
+  .option-text {
+    font-size: 0.8rem;
+    color: var(--cool-gray);
+  }
+  .color-marine-blue {
+    color: var(--marine-blue);
+  }
+  .checkbox-container {
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  input[type="checkbox"] {
+    appearance: none;
+    width: 1.1rem;
+    height: 1.1rem;
+    border: 1px solid var(--light-gray);
+    border-radius: 4px;
+    position: absolute;
+    top: 50%;
+    left: 2rem;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+  }
+  input[type="checkbox"]:checked {
+    background-color: var(--purplish-blue);
+    background-image: url("./assets/images/icon-checkmark.svg");
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center center;
+  }
+  input[type="checkbox"]:checked + label {
+    border: 1px solid var(--purplish-blue);
+    background-color: var(--alabaster);
+  }
+  .checkbox-container label {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    padding: 1rem 1rem 1rem 4.1rem;
+    border: 1px solid var(--light-gray);
+    border-radius: 8px;
+  }
+  .checkbox-container label:hover {
+    border: 1px solid var(--purplish-blue);
+    cursor: pointer;
+  }
+  .checkbox-container label > div {
+    flex-grow: 1;
+  }
+  .check-heading {
+    margin: 0 0 0.3rem 0;
+    padding: 0;
+    color: var(--marine-blue);
+    font-size: 0.9rem;
+    font-weight: 500;
+
+  }
+  .check-text {
+    margin: 0;
+    padding: 0;
+    color: var(--cool-gray);
+    font-size: 0.8rem;
+  }
+  .addon-price {
+    color: var(--purplish-blue);
+    font-size: 0.8rem;
+  }
+  .summary-area {
+    padding: 1rem;
+    background-color: var(--magnolia);
+    border-radius: 8px;
+  }
+  .summary-area > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .summary-area p {
+    margin-bottom: 0.5rem;
+    color: var(--marine-blue);
+    font-weight: 500;
+  }
+  .summary-area a {
+    font-size: 0.9rem;
+    text-decoration: underline;
+    color: var(--cool-gray);
+  }
+  .summary-area a:hover {
+    cursor: pointer;
+    color: var(--purplish-blue);
+  }
+  .addOns-summary {
+    margin: 1rem 0;
+  }
+  .addOns-summary span , .summary-total span:first-child {
+    font-size: 0.9rem;
+    color: var(--cool-gray);
+  }
+  .addOns-summary span:last-child {
+    color: var(--marine-blue);
+  }
+  hr {
+    border:1px solid var(--light-gray);
+  }
+  .plan-price {
+    color: var(--marine-blue);
+    font-weight: bold;
+  }
+  .summary-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5% 1rem;
+  }
+  .summary-total span:last-child {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--purplish-blue);
+  }
+
+  .step5 {
+    text-align: center;
+    padding: 30% 15%;
+  }
+  .step5 p {
+    line-height: 1.5;
+  }
+@media screen and (max-width: 991px) {
+  body {
+    padding: 0;
+  }
+  .container {
+    background-color: var(--magnolia);
+    grid-template-columns: auto;
+    width: 100%;
+    padding: 0;
+    border-radius: 0;
+  }
+  .step-container {
+    display: flex;
+    justify-content: center;
+    grid-area: 1/1/2/2;
+    padding: 10% 0 30% 0;
+    background-image: url("./assets/images/bg-sidebar-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0;
+  }
+  .step {
+    margin: 0 0.5rem;
+  }
+  .number-text {
+    display: none;
+  }
+  .info {
+    margin: -20% 5% 0 5%;
+    background-color: var(--white);
+    border-radius: 12px;
+  }
+
+  .step1 {
+    padding: 10%;
+  }
+  .input-text {
+    width: 90%;
+  }
+
+  .controller {
+    background-color: var(--white);
+    padding: 2% 5%;
+    margin-top: 30%;
+  }
+  .next-button {
+    margin-bottom: 0;
+  }
+
+  .plans {
+    flex-direction: column;
+  }
+  .radio-label {
+    box-sizing: border-box;
+    flex-basis: 30%;
+    padding: 2.5%;
+    display: flex;
+    margin-bottom: 1rem;
+  }
+  .radio-label > div {
+    margin-left: 1rem;
+  }
+  .radio-label img {
+    margin-bottom: 0;
+  }
+}
